@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Decision Record",
+  "type": "object",
+  "required": ["decision_id", "research_id", "decision_date", "action", "confidence", "position", "invalidation_conditions", "review_date"],
+  "properties": {
+    "decision_id": {"type": "string"},
+    "research_id": {"type": "string"},
+    "decision_date": {"type": "string", "format": "date"},
+    "ticker": {"type": "string"},
+    "action": {"enum": ["avoid", "watch", "initiate", "add", "hold", "reduce", "exit"]},
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "position": {
+      "type": "object",
+      "required": ["initial_pct", "max_pct"],
+      "properties": {
+        "initial_pct": {"type": "number", "minimum": 0, "maximum": 100},
+        "max_pct": {"type": "number", "minimum": 0, "maximum": 100},
+        "risk_budget_pct": {"type": "number", "minimum": 0, "maximum": 100}
+      }
+    },
+    "expected_return": {"type": "number"},
+    "downside_risk": {"type": "number"},
+    "risk_reward_ratio": {"type": "number"},
+    "reasoning_summary": {"type": "string"},
+    "invalidation_conditions": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "add_conditions": {"type": "array", "items": {"type": "string"}},
+    "reduce_conditions": {"type": "array", "items": {"type": "string"}},
+    "review_date": {"type": "string", "format": "date"},
+    "human_approval": {"type": "boolean"},
+    "qa_status": {"enum": ["pending", "passed", "failed"]}
+  }
+}
