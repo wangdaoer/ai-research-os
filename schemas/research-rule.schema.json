@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Research Rule",
+  "type": "object",
+  "required": ["rule_id", "title", "statement", "status", "created_at", "evidence"],
+  "properties": {
+    "rule_id": {"type": "string", "pattern": "^RULE-[0-9]{4}$"},
+    "title": {"type": "string"},
+    "statement": {"type": "string"},
+    "domain": {"type": "array", "items": {"enum": ["data", "fundamental", "industry", "valuation", "market", "risk", "portfolio", "agent", "review", "content"]}},
+    "status": {"enum": ["candidate", "active", "deprecated", "rejected"]},
+    "created_at": {"type": "string", "format": "date"},
+    "updated_at": {"type": "string", "format": "date"},
+    "evidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["source_type", "source_id", "support"],
+        "properties": {
+          "source_type": {"enum": ["article", "research", "decision", "backtest", "review", "external"]},
+          "source_id": {"type": "string"},
+          "support": {"enum": ["supports", "contradicts", "mixed"]},
+          "note": {"type": "string"}
+        }
+      }
+    },
+    "activation_threshold": {"type": "string"},
+    "exceptions": {"type": "array", "items": {"type": "string"}},
+    "applies_to_agents": {"type": "array", "items": {"type": "string"}},
+    "supersedes": {"type": "array", "items": {"type": "string"}}
+  }
+}
