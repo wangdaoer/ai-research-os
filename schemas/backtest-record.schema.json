@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Backtest Record",
+  "type": "object",
+  "required": ["backtest_id", "decision_id", "start_date", "end_date", "benchmark", "result"],
+  "properties": {
+    "backtest_id": {"type": "string"},
+    "decision_id": {"type": "string"},
+    "ticker": {"type": "string"},
+    "start_date": {"type": "string", "format": "date"},
+    "end_date": {"type": "string", "format": "date"},
+    "benchmark": {"type": "string"},
+    "result": {
+      "type": "object",
+      "required": ["absolute_return", "benchmark_return", "excess_return", "max_drawdown"],
+      "properties": {
+        "absolute_return": {"type": "number"},
+        "benchmark_return": {"type": "number"},
+        "excess_return": {"type": "number"},
+        "max_drawdown": {"type": "number"},
+        "holding_days": {"type": "integer", "minimum": 0}
+      }
+    },
+    "thesis_outcome": {"enum": ["correct", "partly_correct", "wrong", "unresolved"]},
+    "logic_outcome": {"enum": ["sound", "partly_sound", "flawed", "unresolved"]},
+    "position_outcome": {"enum": ["appropriate", "too_large", "too_small", "not_applicable"]},
+    "error_types": {"type": "array", "items": {"enum": ["data", "consensus", "forecast", "valuation", "timing", "position", "tail_risk", "confirmation_bias", "execution"]}},
+    "lessons": {"type": "array", "items": {"type": "string"}},
+    "new_rule_ids": {"type": "array", "items": {"type": "string"}}
+  }
+}
