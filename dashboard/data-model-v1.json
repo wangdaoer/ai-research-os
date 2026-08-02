@@ -1,0 +1,21 @@
+{
+  "dashboard": {
+    "market": {},
+    "watchlist": [],
+    "research_queue": [],
+    "alerts": []
+  },
+  "stock": {
+    "ticker": "",
+    "research_id": "",
+    "decision": "",
+    "confidence": 0,
+    "risks": [],
+    "next_review": ""
+  },
+  "agent": {
+    "name": "",
+    "score": 0,
+    "history": []
+  }
+}
