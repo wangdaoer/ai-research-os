@@ -1,0 +1,36 @@
+{
+  "decision_id": "DEC-CN-300750-20260802-v0",
+  "research_id": "CN-300750-20260802-v0",
+  "version": 0,
+  "decision_date": "2026-08-02",
+  "ticker": "300750.SZ",
+  "company_name": "宁德时代",
+  "horizon": "12-24 months",
+  "action": "WATCH",
+  "status": "INCOMPLETE_INPUT",
+  "confidence": null,
+  "current_price": null,
+  "price_date": null,
+  "expected_return": null,
+  "downside_risk": null,
+  "risk_reward_ratio": null,
+  "initial_position_pct": 0,
+  "max_position_pct": 0,
+  "rationale": [
+    "2026年半年度报告已发布，收入保持较高增速，具备启动正式研究的条件。",
+    "当前尚缺带日期的市场价格、完整现金流拆解、行业独立数据和一致预期，无法判断赔率。"
+  ],
+  "blocking_inputs": [
+    "current A-share price and valuation date",
+    "full 2026 interim financial statement extraction",
+    "2026-2028 consensus estimates with source/date/sample size",
+    "industry demand and market-share data",
+    "bear-case downside and invalidation conditions"
+  ],
+  "invalidation_conditions": [],
+  "next_review_trigger": "P0 inputs complete and QA-validated",
+  "human_approval": {
+    "required": true,
+    "status": "pending"
+  }
+}
