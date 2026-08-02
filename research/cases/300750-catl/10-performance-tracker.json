@@ -1,0 +1,16 @@
+{
+  "research_id": "CN-300750-20260802-001",
+  "ticker": "300750.SZ",
+  "company": "CATL",
+  "initial_date": "2026-08-02",
+  "initial_price": null,
+  "tracking": {
+    "3_month": null,
+    "6_month": null,
+    "12_month": null
+  },
+  "thesis_result": null,
+  "logic_result": null,
+  "position_result": null,
+  "lessons": []
+}
