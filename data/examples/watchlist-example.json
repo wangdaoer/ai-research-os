@@ -1,0 +1,13 @@
+{
+  "portfolio_id": "default",
+  "updated_at": "2026-08-02",
+  "stocks": [
+    {
+      "ticker": "300750",
+      "name": "宁德时代",
+      "market": "CN",
+      "tags": ["新能源", "电池", "储能"],
+      "research_id": "CN-300750-20260802-001"
+    }
+  ]
+}
