@@ -1,0 +1,13 @@
+{
+  "event_id": "",
+  "date": "",
+  "ticker": "",
+  "event_type": "price|fundamental|industry|thesis",
+  "description": "",
+  "impact_level": "low|medium|high",
+  "affected_research_ids": [],
+  "triggered_agents": [],
+  "confidence_change": 0,
+  "action_required": "",
+  "review_status": "pending"
+}
